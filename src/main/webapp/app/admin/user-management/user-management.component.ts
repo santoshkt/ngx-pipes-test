@@ -51,6 +51,12 @@ export class UserMgmtComponent implements OnInit, OnDestroy {
             this.loadAll();
             this.registerChangeInUsers();
         });
+        this.alertService.warning("You have been warned");
+    }
+
+    clickMe() {
+        console.log("Alert clearing initiated.");
+        this.alertService.clear();
     }
 
     ngOnDestroy() {
